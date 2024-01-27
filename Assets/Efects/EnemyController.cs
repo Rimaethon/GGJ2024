@@ -8,4 +8,10 @@ public class EnemyController: MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log(other.gameObject.name);
+
+    }
 }
