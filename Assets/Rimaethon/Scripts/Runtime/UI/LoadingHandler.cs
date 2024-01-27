@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 namespace Rimaethon.Runtime.UI
 {
+    
+    
     //This class is a singleton because of the chance of duplication. 
     public class LoadingHandler : PersistentSingleton<LoadingHandler>
     {
