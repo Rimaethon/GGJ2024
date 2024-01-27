@@ -223,7 +223,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.11
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &250137114
 ConfigurableJoint:
@@ -366,7 +366,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &547793825
 ConfigurableJoint:
@@ -509,7 +509,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.111
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &608574453
 ConfigurableJoint:
@@ -652,7 +652,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.111
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &760610212
 ConfigurableJoint:
@@ -795,7 +795,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.11
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &943344468
 ConfigurableJoint:
@@ -1014,7 +1014,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &994829793 stripped
 GameObject:
@@ -1032,7 +1032,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &994829798
 ConfigurableJoint:
@@ -1174,9 +1174,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  m_Radius: 0.11
+  m_Height: 0.5
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1141869543
 ConfigurableJoint:
@@ -1318,8 +1318,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1
+  m_Radius: 0.11
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1193377727
@@ -1543,8 +1543,65 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1310530368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_Name
+      value: scp_cy_cement_mixer_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.697689
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5100002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.95015526
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14f1a9675c488e143b82673a1d31f954, type: 3}
 --- !u!1 &1371647141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5386126468413833951, guid: 09cbb7aeef34a4445ba7f2f353f25356, type: 3}
@@ -1561,7 +1618,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1371647146
 ConfigurableJoint:
@@ -1721,7 +1778,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1498702123
 ConfigurableJoint:
@@ -1864,7 +1921,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1502091820
 ConfigurableJoint:
@@ -2007,7 +2064,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.11
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1591807072
 ConfigurableJoint:
@@ -2149,8 +2206,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1
+  m_Radius: 0.11
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1652483255
@@ -2414,9 +2471,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  m_Radius: 0.11
+  m_Height: 0.5
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1815528724
 ConfigurableJoint:
@@ -2559,7 +2616,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.11
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &1995696140
 ConfigurableJoint:
@@ -2702,7 +2759,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!153 &2040927451
 ConfigurableJoint:
