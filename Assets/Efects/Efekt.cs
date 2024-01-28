@@ -11,20 +11,4 @@ public class Efekt : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.name);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name);
-
-    }
-
-    private void OnParticleCollision(GameObject other)
-    {
-        Debug.Log(other.gameObject.name);
-
-    }
 }

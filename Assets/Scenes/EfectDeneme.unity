@@ -167,12 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204c2a47f113af645b0c5917f57b1c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRadius: 5
-  damageRate: 10
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  segments: 20
   efekt: {fileID: 6684471461528294165, guid: 776a404d0d03eca469bbecf611ce0afb, type: 3}
 --- !u!1 &682438868
 GameObject:
@@ -266,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682438868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.57}
+  m_LocalPosition: {x: -0.01, y: 0, z: 6.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -298,7 +292,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 682438868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3530d4b50d2760a46818644635ed9237, type: 3}
+  m_Script: {fileID: 11500000, guid: e9dc067b68babae4f80c1890d246ba4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1009195197
@@ -558,6 +552,10 @@ PrefabInstance:
     - target: {fileID: 6684471461528294165, guid: 776a404d0d03eca469bbecf611ce0afb, type: 3}
       propertyPath: m_Name
       value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684471461528294165, guid: 776a404d0d03eca469bbecf611ce0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776a404d0d03eca469bbecf611ce0afb, type: 3}
