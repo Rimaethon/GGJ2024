@@ -8,6 +8,7 @@ TagManager:
   - RedEnemy
   - BlueEnemy
   - Ground
+  - Ball
   layers:
   - Default
   - TransparentFX
