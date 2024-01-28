@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Rimaethon.Scripts.Core.Enums;
 using Rimaethon.Scripts.Managers;
@@ -97,6 +96,8 @@ namespace Rimaethon.Runtime.UI
                 PopPageFromStack();
                 Time.timeScale = 1;
                 EventManager.Instance.Broadcast(GameEvents.OnResume);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 _menuCanvas.enabled = false;
             }
             else
@@ -104,6 +105,7 @@ namespace Rimaethon.Runtime.UI
                 PushPageToStack(0);
                 EventManager.Instance.Broadcast(GameEvents.OnPause);
                 _menuCanvas.enabled = true;
+                Cursor.visible = true;
                 Time.timeScale = 0;
             }
         }

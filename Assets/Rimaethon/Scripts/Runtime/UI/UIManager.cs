@@ -6,9 +6,6 @@ namespace Rimaethon.Runtime.UI
 {
     public class UIManager : MonoBehaviour
     {
-        private void Start()
-        {
-            EventManager.Instance.Broadcast(GameEvents.OnGameStart);
-        }
+      
     }
 }

@@ -15,11 +15,6 @@ namespace BlazeAIDemo
             controller = GetComponent<CharacterController>();
             anim = GetComponent<Animator>();
             transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
-
-            if (lockCursor) {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
         }
 
         void Update()

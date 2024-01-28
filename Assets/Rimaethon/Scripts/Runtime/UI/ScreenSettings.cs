@@ -8,7 +8,7 @@ namespace Rimaethon.Runtime.UI
     public class ScreenSettings : MonoBehaviour
     {
         [SerializeField] private TMP_Dropdown resolutionDropdown;
-        [SerializeField] private Toggle fullScreenToggle;
+        [SerializeField] private TMP_Dropdown fullScreenDropdown;
         private int _frameRate;
         private bool _isFullScreen;
         private int _screenHeight;
@@ -17,33 +17,27 @@ namespace Rimaethon.Runtime.UI
         private void Awake()
         {
             InitializeResolutionDropdown();
+            InitializeFullScreenDropdown();
             LoadResolution();
         }
 
-
-        private void OnEnable()
+        public void LoadData()
         {
-            fullScreenToggle.onValueChanged.AddListener(FullScreenToggle);
-        }
-
-        /*public void LoadData(GameSettingsData data)
-        {
-            _screenHeight = data.ScreenHeight;
-            _screenWidth = data.ScreenWidth;
-            _isFullScreen = data.FullScreen;
-            _frameRate = data.FrameRate;
+            _screenHeight = PlayerPrefs.GetInt("ScreenHeight", 1080);
+            _screenWidth = PlayerPrefs.GetInt("ScreenWidth", 1920);
+            _isFullScreen = PlayerPrefs.GetInt("FullScreen", 0) == 1;
+            _frameRate = PlayerPrefs.GetInt("FrameRate", 60);
             LoadResolution();
-            FullScreenToggle(_isFullScreen);
+            FullScreenToggle(fullScreenDropdown.value);
         }
 
-        public void SaveData(GameSettingsData data)
+        public void SaveData()
         {
-            data.ScreenHeight = _screenHeight;
-            data.ScreenWidth = _screenWidth;
-            data.FullScreen = _isFullScreen;
-            data.FrameRate = _frameRate;
-        }*/
-
+            PlayerPrefs.SetInt("ScreenHeight", _screenHeight);
+            PlayerPrefs.SetInt("ScreenWidth", _screenWidth);
+            PlayerPrefs.SetInt("FullScreen", _isFullScreen ? 1 : 0);
+            PlayerPrefs.SetInt("FrameRate", _frameRate);
+        }
 
         private void InitializeResolutionDropdown()
         {
@@ -60,6 +54,14 @@ namespace Rimaethon.Runtime.UI
             resolutionDropdown.AddOptions(resolutionOptions);
         }
 
+        private void InitializeFullScreenDropdown()
+        {
+            fullScreenDropdown.ClearOptions();
+            var fullScreenOptions = new List<string> { "Enable", "Disable" };
+            fullScreenDropdown.AddOptions(fullScreenOptions);
+            fullScreenDropdown.onValueChanged.AddListener(FullScreenToggle);
+        }
+
         public void ChangeResolution()
         {
             var selectedResolution = resolutionDropdown.options[resolutionDropdown.value].text;
@@ -68,8 +70,8 @@ namespace Rimaethon.Runtime.UI
             _screenHeight = int.Parse(resolution[1]);
 
             Screen.SetResolution(_screenWidth, _screenHeight, _isFullScreen);
+            SaveData();
         }
-
 
         private void LoadResolution()
         {
@@ -87,9 +89,9 @@ namespace Rimaethon.Runtime.UI
             }
         }
 
-        private void FullScreenToggle(bool isFullScreen)
+        private void FullScreenToggle(int dropdownValue)
         {
-            _isFullScreen = isFullScreen;
+            _isFullScreen = dropdownValue == 0;
             Screen.fullScreen = _isFullScreen;
         }
     }
