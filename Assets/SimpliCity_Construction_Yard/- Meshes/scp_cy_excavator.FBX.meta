@@ -1,83 +1,165 @@
 fileFormatVersion: 2
 guid: b5538db9ef5232f449789bd475ac90a8
-timeCreated: 1474983731
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: scp_cy_excavator_arm_01
-    100004: scp_cy_excavator_arm_02
-    100006: scp_cy_excavator_body
-    100008: scp_cy_excavator_bucket
-    100010: scp_cy_excavator_tracks
-    400000: //RootNode
-    400002: scp_cy_excavator_arm_01
-    400004: scp_cy_excavator_arm_02
-    400006: scp_cy_excavator_body
-    400008: scp_cy_excavator_bucket
-    400010: scp_cy_excavator_tracks
-    2300000: scp_cy_excavator_arm_01
-    2300002: scp_cy_excavator_arm_02
-    2300004: scp_cy_excavator_body
-    2300006: scp_cy_excavator_bucket
-    2300008: scp_cy_excavator_tracks
-    3300000: scp_cy_excavator_arm_01
-    3300002: scp_cy_excavator_arm_02
-    3300004: scp_cy_excavator_body
-    3300006: scp_cy_excavator_bucket
-    3300008: scp_cy_excavator_tracks
-    4300000: scp_cy_excavator_arm_01
-    4300002: scp_cy_excavator_bucket
-    4300004: scp_cy_excavator_body
-    4300006: scp_cy_excavator_arm_02
-    4300008: scp_cy_excavator_tracks
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: scp_cy_excavator_arm_01
+  - first:
+      1: 100004
+    second: scp_cy_excavator_arm_02
+  - first:
+      1: 100006
+    second: scp_cy_excavator_body
+  - first:
+      1: 100008
+    second: scp_cy_excavator_bucket
+  - first:
+      1: 100010
+    second: scp_cy_excavator_tracks
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: scp_cy_excavator_arm_01
+  - first:
+      4: 400004
+    second: scp_cy_excavator_arm_02
+  - first:
+      4: 400006
+    second: scp_cy_excavator_body
+  - first:
+      4: 400008
+    second: scp_cy_excavator_bucket
+  - first:
+      4: 400010
+    second: scp_cy_excavator_tracks
+  - first:
+      23: 2300000
+    second: scp_cy_excavator_arm_01
+  - first:
+      23: 2300002
+    second: scp_cy_excavator_arm_02
+  - first:
+      23: 2300004
+    second: scp_cy_excavator_body
+  - first:
+      23: 2300006
+    second: scp_cy_excavator_bucket
+  - first:
+      23: 2300008
+    second: scp_cy_excavator_tracks
+  - first:
+      33: 3300000
+    second: scp_cy_excavator_arm_01
+  - first:
+      33: 3300002
+    second: scp_cy_excavator_arm_02
+  - first:
+      33: 3300004
+    second: scp_cy_excavator_body
+  - first:
+      33: 3300006
+    second: scp_cy_excavator_bucket
+  - first:
+      33: 3300008
+    second: scp_cy_excavator_tracks
+  - first:
+      43: 4300000
+    second: scp_cy_excavator_arm_01
+  - first:
+      43: 4300002
+    second: scp_cy_excavator_bucket
+  - first:
+      43: 4300004
+    second: scp_cy_excavator_body
+  - first:
+      43: 4300006
+    second: scp_cy_excavator_arm_02
+  - first:
+      43: 4300008
+    second: scp_cy_excavator_tracks
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -87,11 +169,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.0025
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
