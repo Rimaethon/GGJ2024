@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Rimaethon.Scripts.Core.Enums;
 using Rimaethon.Scripts.Managers;
@@ -34,6 +35,13 @@ namespace Rimaethon.Runtime.UI
             EventManager.Instance.RemoveHandler<int>(GameEvents.OnPageChange, PushPageToStack);
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                HandleUIBack();
+            }
+        }
 
         private void HandleUIBack()
         {

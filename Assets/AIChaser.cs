@@ -38,7 +38,7 @@ public class AIChaser : MonoBehaviour
         health--;
         if (health <= 0)
         {
-            // Handle AI death here
+            BroadcastMessage("Explode");
         }
     }
 
