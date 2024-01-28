@@ -10,9 +10,11 @@ public class LimbCollision : MonoBehaviour
     {
         playerController = GameObject.FindAnyObjectByType<PlayerController>().GetComponent<PlayerController>();
     }
-
     private void OnCollisionEnter(Collision collision)
     {
-        playerController.isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            playerController.isGrounded = true;
+        }
     }
 }
