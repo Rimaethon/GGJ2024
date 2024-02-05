@@ -41,24 +41,6 @@ namespace Rimaethon.Runtime.UI
             sfxVolumeSlider.onValueChanged.RemoveListener(SetSfxVolume);
         }
 
-        /*public void LoadData(GameSettingsData data)
-        {
-            masterVolumeSlider.value = data.MasterVolume;
-            Debug.Log($"Master Volume: {data.MasterVolume}");
-            Debug.Log(masterVolumeSlider.value);
-            musicVolumeSlider.value = data.MusicVolume;
-            sfxVolumeSlider.value = data.SFXVolume;
-            LoadVolumes();
-        }
-
-        public void SaveData(GameSettingsData data)
-        {
-            data.MasterVolume = masterVolumeSlider.value;
-            data.MusicVolume = musicVolumeSlider.value;
-            data.SFXVolume = sfxVolumeSlider.value;
-        }*/
-
-
         private void SetMasterVolume(float volume)
         {
             SetVolume(MasterVolume, masterVolumeSlider, volume);
@@ -78,11 +60,14 @@ namespace Rimaethon.Runtime.UI
         {
             audioMixer.SetFloat(volumeType, Mathf.Lerp(-80, 0, volume));
             volumeSlider.value = volume;
+            PlayerPrefs.SetFloat(volumeType, volume);
         }
-
 
         private void LoadVolumes()
         {
+            masterVolumeSlider.value = PlayerPrefs.GetFloat(MasterVolume, 0.5f);
+            musicVolumeSlider.value = PlayerPrefs.GetFloat(MusicVolume, 1f);
+            sfxVolumeSlider.value = PlayerPrefs.GetFloat(SfxVolume, 1f);
             SetMasterVolume(masterVolumeSlider.value);
             SetMusicVolume(musicVolumeSlider.value);
             SetSfxVolume(sfxVolumeSlider.value);

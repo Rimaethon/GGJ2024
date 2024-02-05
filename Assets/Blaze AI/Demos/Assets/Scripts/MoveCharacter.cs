@@ -8,7 +8,6 @@ namespace BlazeAIDemo
         CharacterController controller;
         Animator anim;
         public float playerSpeed = 5f;
-        public bool lockCursor = true;
 
         void Start()
         {

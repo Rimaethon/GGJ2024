@@ -12,10 +12,6 @@ public class camerascript : MonoBehaviour
     public float stomachOffset;
 
     public ConfigurableJoint hipJoint, stomachJoint;
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 
     // Update is called once per frame
     void FixedUpdate()

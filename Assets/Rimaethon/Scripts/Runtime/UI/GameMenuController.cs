@@ -14,6 +14,7 @@ namespace Rimaethon.Runtime.UI
         private readonly Stack<UIPage> _openPageStack = new();
         private UIPage _currentPage;
         private Canvas _menuCanvas;
+        private int openPageCount => _openPageStack.Count;
 
 
         private void Awake()
@@ -91,22 +92,25 @@ namespace Rimaethon.Runtime.UI
 
         private void TogglePause()
         {
-            if (_menuCanvas.enabled)
+            if (openPageCount ==1)
             {
                 PopPageFromStack();
                 Time.timeScale = 1;
                 EventManager.Instance.Broadcast(GameEvents.OnResume);
                 Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
                 _menuCanvas.enabled = false;
             }
-            else
+            else if(openPageCount==0)
             {
                 PushPageToStack(0);
                 EventManager.Instance.Broadcast(GameEvents.OnPause);
                 _menuCanvas.enabled = true;
                 Cursor.visible = true;
                 Time.timeScale = 0;
+            }
+            else
+            {
+                PopPageFromStack();
             }
         }
     }
