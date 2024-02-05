@@ -15,11 +15,13 @@ namespace Rimaethon.Runtime.UI
         private UIPage _currentPage;
         private Canvas _menuCanvas;
         private int openPageCount => _openPageStack.Count;
-
+        private CursorLockMode lockMode;
 
         private void Awake()
         {
             _menuCanvas = GetComponent<Canvas>();
+            lockMode = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         private void OnEnable()
@@ -99,9 +101,11 @@ namespace Rimaethon.Runtime.UI
                 EventManager.Instance.Broadcast(GameEvents.OnResume);
                 Cursor.visible = false;
                 _menuCanvas.enabled = false;
+                lockMode = CursorLockMode.Locked;
             }
             else if(openPageCount==0)
             {
+                lockMode = CursorLockMode.None;
                 PushPageToStack(0);
                 EventManager.Instance.Broadcast(GameEvents.OnPause);
                 _menuCanvas.enabled = true;
