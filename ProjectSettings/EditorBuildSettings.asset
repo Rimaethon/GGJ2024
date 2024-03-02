@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenuUIScene.unity
-    guid: 1c7c3c77496654747a2b071d37939e87
+    path: Assets/Scenes/SceneObstacleTry.unity
+    guid: f0337b735b5f984409e5e4ff85346167
   m_configObjects: {}

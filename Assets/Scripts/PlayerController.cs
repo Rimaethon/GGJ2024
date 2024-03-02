@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool isMoving = false;
+        //bool isMoving = false;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -33,22 +33,22 @@ public class PlayerController : MonoBehaviour
                 hips.AddForce(hips.transform.forward * speed);
             }
 
-            isMoving = true;
+            //isMoving = true;
         }
         if (Input.GetKey(KeyCode.A))
         {
             hips.AddForce(-hips.transform.right * strafespeed);
-            isMoving = true;
+            //isMoving = true;
         }
         if (Input.GetKey(KeyCode.S))
         {
             hips.AddForce(-hips.transform.forward * speed);
-            isMoving = true;
+            //isMoving = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             hips.AddForce(hips.transform.right * strafespeed);
-            isMoving = true;
+            //isMoving = true;
         }
         if (Input.GetAxis("Jump") > 0)
         {
@@ -58,16 +58,16 @@ public class PlayerController : MonoBehaviour
                 isGrounded = false;
             }
 
-            isMoving = true;
+            //isMoving = true;
         }
 
-        if (isMoving && !audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
-        else if (!isMoving && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
+        //if (isMoving && !audioSource.isPlaying)
+        //{
+        //    audioSource.Play();
+        //}
+        //else if (!isMoving && audioSource.isPlaying)
+        //{
+        //    audioSource.Stop();
+        //}
     }
 }

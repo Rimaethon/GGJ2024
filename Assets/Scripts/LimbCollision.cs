@@ -6,6 +6,9 @@ public class LimbCollision : MonoBehaviour
 {
     public PlayerController playerController;
 
+    public AudioSource audioSource;
+
+
     private void Start()
     {
         playerController = GameObject.FindAnyObjectByType<PlayerController>().GetComponent<PlayerController>();
@@ -14,7 +17,16 @@ public class LimbCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            playerController.isGrounded = true;
+            if (!playerController.isGrounded)
+            {
+                if (  audioSource &&  !audioSource.isPlaying)
+                {
+                    audioSource?.Play();
+
+                }
+                playerController.isGrounded = true;
+
+            }
         }
     }
 }

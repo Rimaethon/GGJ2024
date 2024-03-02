@@ -8,6 +8,13 @@ public class SoundWaveController : MonoBehaviour
 
     private ParticleSystem particleSystem;
     private ParticleSystem.EmissionModule emission;
+
+    public AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Start()
     {
         particleSystem = GetComponent<ParticleSystem>();
@@ -20,11 +27,13 @@ public class SoundWaveController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             emission.enabled = true;
+            audioSource.Play();
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            audioSource.Stop();
             emission.enabled = false;
         }
-       
+
     }
 }

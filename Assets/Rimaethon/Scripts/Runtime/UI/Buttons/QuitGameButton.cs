@@ -14,11 +14,11 @@ namespace Rimaethon.Scripts.UI
 
         private void QuitGame()
         {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+//#if UNITY_EDITOR
+//            EditorApplication.isPlaying = false;
+//#else
+//        Application.Quit();
+//#endif
         }
     }
 }

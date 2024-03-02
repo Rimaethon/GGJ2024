@@ -10,6 +10,8 @@ public class MouseLookController : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         Vector3 rot = transform.localRotation.eulerAngles;
         rotationY = rot.y;
         rotationX = rot.x;
